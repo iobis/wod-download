@@ -1,0 +1,3 @@
+siphon
+netCDF4
+requests
