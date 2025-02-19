@@ -22,7 +22,7 @@ def download_datasets_from_catalog(catalog: TDSCatalog, output_path: str):
             logging.info(f"Saved: {file_path}")
 
     for catalog_ref_name, catalog_ref in catalog.catalog_refs.items():
-        download_datasets_from_catalog(catalog_ref, output_path)
+        download_datasets_from_catalog(catalog_ref.follow(), output_path)
 
 
 logging.basicConfig(level=logging.INFO)
